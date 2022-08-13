@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Estoque.Infra.Data.Mappings
 {
-    internal class CategoiaMap : IEntityTypeConfiguration<Categoria>
+    internal class CategoriaMap : IEntityTypeConfiguration<Categoria>
     {
         public void Configure(EntityTypeBuilder<Categoria> builder)
         {

@@ -17,7 +17,7 @@ namespace Estoque.Infra.Data.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new CategoiaMap());
+            modelBuilder.ApplyConfiguration(new CategoriaMap());
             modelBuilder.ApplyConfiguration(new ProdutoMap());
 
         }

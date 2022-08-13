@@ -12,6 +12,12 @@ namespace Estoque.Domain.Services
     public class ProdutoService : IProdutoService
     {
         private readonly IProdutoRepository _repository;
+
+        public ProdutoService(IProdutoRepository repository)
+        {
+            _repository = repository;
+        }
+
         public async Task CreateAsync(Produto produto)
         {
             await _repository.CreateAsync(produto);
@@ -22,19 +28,19 @@ namespace Estoque.Domain.Services
             await _repository.DeleteAsync(produto);
         }
 
-        public Task<Produto> GetByIdAsync(Guid id)
+        public async Task<Produto> GetByIdAsync(Guid id)
         {
-            return _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(id);
                 }
 
-        public Task<List<Produto>> ListAsync()
+        public async Task<List<Produto>> ListAsync()
         {
-            return _repository.ListAsync();
+            return await _repository.ListAsync();
         }
 
-        public Task UpdateAsync(Produto produto)
+        public async Task UpdateAsync(Produto produto)
         {
-            return _repository.UpdateAsync(produto);
+            await _repository.UpdateAsync(produto);
         }
     }
 }

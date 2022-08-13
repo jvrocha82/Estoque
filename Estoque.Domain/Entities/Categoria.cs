@@ -8,8 +8,8 @@ namespace Estoque.Domain.Entities
 {
     public class Categoria
     {
-        public Guid Id { get; private set; }
-        public string Descricao { get; private set; }
+        public Guid Id { get; set; }
+        public string Descricao { get; set; }
         public void setCategoria(string descricao)
         {
             Id = Guid.NewGuid();

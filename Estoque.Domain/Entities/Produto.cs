@@ -11,5 +11,11 @@ namespace Estoque.Domain.Entities
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public int Qtd { get; set; }
+        public void setProduto(string nome, int qtd)
+        {
+            Id = Guid.NewGuid();
+            Nome = nome;
+            Qtd = qtd;
+        }
     }
 }
